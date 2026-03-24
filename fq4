@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double calculateEMI(double P, double R = 0.01, int T = 12) {
+    return (P * R * pow(1 + R, T)) / (pow(1 + R, T) - 1);
+}
+
+int main() {
+    double P, R;
+    int T;
+
+    cin >> P >> R >> T;
+    cout << fixed;
+    cout.precision(2);
+    cout << calculateEMI(P, R, T);
+
+    return 0;
+}

@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+void swapByValue(int a, int b) {
+    int temp = a;
+    a = b;
+    b = temp;
+    cout << "After swapByValue: " << a << " " << b << endl;
+}
+
+void swapByReference(int &a, int &b) {
+    int temp = a;
+    a = b;
+    b = temp;
+    cout << "After swapByReference: " << a << " " << b << endl;
+}
+
+int main() {
+    int a, b;
+    cin >> a >> b;
+
+    swapByValue(a, b);
+    cout << "Original after swapByValue: " << a << " " << b << endl;
+
+    swapByReference(a, b);
+    cout << "Original after swapByReference: " << a << " " << b << endl;
+
+    return 0;
+}
